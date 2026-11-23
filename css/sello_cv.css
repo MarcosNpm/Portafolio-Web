@@ -1,0 +1,70 @@
+
+/* ==========================================
+   SELLO CV - EFECTO DE IMPACTO
+   ========================================== */
+
+.cv-temblor {
+    animation: cv-shake 0.28s steps(4, end) !important;
+}
+
+@keyframes cv-shake {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+
+    25% {
+        transform: translate(-3px, 2px);
+    }
+
+    50% {
+        transform: translate(3px, -2px);
+    }
+
+    75% {
+        transform: translate(-2px, 2px);
+    }
+}
+
+/* ==========================================
+   BOTÓN CV - ESTADO OBTENIDO
+   ========================================== */
+
+a.dl-cv.cv-obtenido {
+    background: #D4AF37;
+    color: #101021;
+    border-color: #FFE082;
+
+    box-shadow:
+        4px 4px 0 #8B6914,
+        0 0 14px rgba(212, 175, 55, 0.35);
+
+    font-weight: 800;
+    white-space: nowrap;
+
+    transition:
+        background 0.25s,
+        color 0.25s,
+        border-color 0.25s,
+        box-shadow 0.25s;
+}
+
+/* Hover del botón desbloqueado */
+a.dl-cv.cv-obtenido:hover {
+    background: #FFD700;
+    color: #101021;
+    border-color: #FFE082;
+
+    box-shadow:
+        6px 6px 0 #8B6914,
+        0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* ==========================================
+   ACCESIBILIDAD
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    .cv-temblor {
+        animation: none !important;
+    }
+}
